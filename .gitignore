@@ -1,0 +1,28 @@
+# Secrets / credentials
+.env
+
+# Generated output and local data dumps
+output/
+*.pbix
+SQLDUMPER_ERRORLOG.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# qmig local state
+data/*.sqlite*
+
+# generated reports (qmig report html)
+*.html

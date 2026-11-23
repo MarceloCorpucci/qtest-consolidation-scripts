@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qtest-consolidation"
+version = "0.1.0"
+description = "qTest instance-to-instance migration (folders and test cases)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "DevOps" }]
+# qmig uses only the Python standard library: nothing to install to run it.
+dependencies = []
+
+[project.optional-dependencies]
+# Optional: better TLS certificate handling for python.org builds on macOS.
+tls = ["certifi"]
+
+[project.scripts]
+qmig = "qmig.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qmig"]
